@@ -20,10 +20,8 @@ bomb.AddIndicator("Sierra november delta");
 
 
 
-SimonSays module = new(bomb);
+Wires wires = new(bomb);
 
+wires.SetColors("red red blue white");
 
-Console.WriteLine(module.AppendToSequence("red"));
-Console.WriteLine(module.AppendToSequence("green"));
-Console.WriteLine(module.AppendToSequence("red"));
-Console.WriteLine(module.AppendToSequence("blue"));
+Console.WriteLine(wires.SolveModule());

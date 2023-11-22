@@ -17,7 +17,7 @@ namespace ktane
         // if there were are wires where 2 are blue and 1 is red you would say "blue blue red" 
         public void SetColors(string input)
         {
-            string[] inputs = input.ToUpper().Split(" ");
+            string[] inputs = input.Trim().ToUpper().Split(" ");
             foreach (string item in inputs) 
             {
                 if (validColors.Contains(item))
@@ -34,10 +34,11 @@ namespace ktane
         {
             bool serialOdd = bombPeriphs.Serial[5] % 2 == 1;
 
+
             switch (inputColors.Length)
             {
                 case 3:
-                    if (inputColors == "BLUE BLUE RED".Split(" "))
+                    if (inputColors.SequenceEqual("BLUE BLUE RED".Split(" ")))
                         return "Cut 2nd wire";
                     if (!(inputColors.Contains("RED")))
                         return "Cut 2nd wire";

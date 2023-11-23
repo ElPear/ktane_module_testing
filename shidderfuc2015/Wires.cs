@@ -15,7 +15,7 @@ namespace ktane
 
 
         // if there were are wires where 2 are blue and 1 is red you would say "blue blue red" 
-        public void SetColors(string input)
+        public string SetColors(string input)
         {
             string[] inputs = input.Trim().ToUpper().Split(" ");
             foreach (string item in inputs) 
@@ -25,12 +25,13 @@ namespace ktane
                     inputColors = inputColors.Append(item).ToArray();
                 }
             }
+            return SolveModule();
         }
         public void ResetColors()
         {
             inputColors = Array.Empty<string>();
         }
-        public string SolveModule()
+        private string SolveModule()
         {
             bool serialOdd = bombPeriphs.Serial[5] % 2 == 1;
 

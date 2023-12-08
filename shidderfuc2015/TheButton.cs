@@ -80,7 +80,6 @@
                 case "YELLOW":
                     _buttonColor = string.Empty;
                     return "Hold button and register color of the strip";
-                    break;
                 
                 default:
                     if (bombPeriph.TotalBatteries > 1 && _buttonColor == "RED")
@@ -101,13 +100,10 @@
                         {
                             case "BLUE":
                                 return "Release the button when the timer has a 4 in any position";
-                                break;
                             case "WHITE":
                                 return "Release the button when the timer has a 1 in any position";
-                                break;
                             case "YELLOW":
                                 return "Release the button when the timer has a 5 in any position";
-                                break;
                             default:
                                 break;
                         }

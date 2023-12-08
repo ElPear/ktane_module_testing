@@ -3,7 +3,7 @@
 Bomb bomb = new();
 
 // 6 lång
-bomb.SetSerial("Alpha beta five zeta delta 0");
+bomb.SetSerial("Alpha beta five zeta delta 7");
 
 // ex: "3 small two big"
 bomb.SetBatteries("two big 3 small");
@@ -22,4 +22,4 @@ bomb.AddIndicator("Sierra november delta");
 Wires wires = new(bomb);
 
 
-Console.WriteLine(wires.SetColors("red red blue white"));
+Console.WriteLine(wires.SetColors(Console.ReadLine()));

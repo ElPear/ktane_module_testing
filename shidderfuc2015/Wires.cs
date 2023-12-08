@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ktane
+﻿namespace ktane
 {
     public class Wires
     {
@@ -34,7 +28,6 @@ namespace ktane
         private string SolveModule()
         {
             bool serialOdd = bombPeriphs.Serial[5] % 2 == 1;
-
 
             switch (inputColors.Length)
             {
